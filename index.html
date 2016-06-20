@@ -5,14 +5,27 @@
     <title>123123</title>
 </head>
 <body>
-<button type="button" onclick="myFunction()">Click Me!</button>
+<button type="button" id="myDiv">Click Me!</button>
 <p id="demo"></p>
-
 <script>
+
+    document.getElementById("myDiv").addEventListener("click", myFunction);
+
     function myFunction() {
-        document.getElementById("demo").innerHTML = "Trick or Treat!";
+        document.getElementById("demo").innerHTML = "YOU CLICKED ME!";
     }
+
+    var myEl = document.getElementById('myDiv');
+
+    myEl.addEventListener('click', function() {
+        alert('Hello world');
+    }, false);
+
+    myEl.addEventListener('click', function() {
+        alert('Hello world again!!!');
+    }, false);
 </script>
+
 
 </body>
 </html>
